@@ -1,0 +1,287 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #f0f0f0;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #ff6f61, #ff8a5b);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 3px solid #ff8a5b;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.header p {
+    font-size: 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    border-bottom: 8px solid #ff6f61;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translate(0, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    width: 300px;
+}
+
+.overlay h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Enhanced Button */
+.overlay button {
+    background: linear-gradient(135deg, #ff6f61, #e55b50);
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.overlay button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.overlay button:active {
+    background: linear-gradient(135deg, #e55b50, #ff6f61);
+}
+
+/* New Button in Surprise Box */
+.reveal-btn {
+    background: linear-gradient(135deg, #ff8a5b, #ff6f61);
+    border: none;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.reveal-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.reveal-btn:active {
+    background: linear-gradient(135deg, #ff6f61, #e55b50);
+}
+
+/* Hidden Letter Content */
+.letter-content {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 1rem;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(10%);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.letter-content.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+/* Gallery Section */
+.gallery {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2rem auto;
+    max-width: 80%;
+}
+
+.gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff6f61;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* Apply random height differences to images */
+.gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 6px 6px 1px rgb(128, 116, 116);
+}
+
+/* Default height for images */
+.gallery-img:nth-child(odd) {
+    height: 400px; /* Adjust as needed */
+}
+
+.gallery-img:nth-child(even) {
+    height: 350px; /* Adjust as needed */
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* Message Section */
+.message {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 80%;
+    position: relative;
+}
+
+.message-img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    margin: 1rem 0;
+}
+
+/* Footer */
+.footer {
+    background: #ff6f61;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+}
+
+/* Media Queries */
+
+/* For tablets and smaller laptops */
+@media (max-width: 1024px) {
+    .hero-img {
+        height: 40vh;
+    }
+
+    .overlay {
+        width: 100%;
+    }
+
+    .gallery h2 {
+        font-size: 1.8rem;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .gallery-img:nth-child(odd) {
+        height: 160px;
+    }
+
+    .gallery-img:nth-child(even) {
+        height: 200px;
+    }
+}
+
+/* For smartphones */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 0.9rem;
+    }
+
+    .hero-img {
+        height: 30vh;
+    }
+
+    /* Move overlay below image and center it */
+    .overlay {
+        position: static;
+        margin: 1rem auto;
+        width: 90%; /* Ensure it doesn't overflow the screen */
+        padding: 1rem;
+        transform: none;
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    .overlay h2 {
+        font-size: 1.8rem;
+    }
+
+    .overlay button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .gallery h2 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    /* Adjust heights for mobile view */
+    .gallery-img:nth-child(odd) {
+        height: 200px; /* Adjust as needed */
+    }
+
+    .gallery-img:nth-child(even) {
+        height: 180px; /* Adjust as needed */
+    }
+}
+
